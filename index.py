@@ -5,12 +5,12 @@ import cgi, os
 
 files = os.listdir('data')
 listStr = ''
-for item in flies:
-    listStr = listStr + '<li><a htef="index.py?id={name}">{name}</a></li>'.formet(name=item)
+for item in files:
+    listStr = listStr + '<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
 
 form = cgi.FieldStorage()
 if 'id' in form:
-    pageId =  form["id"].value
+    pageId = form["id"].value
     description = open('data/'+pageId, 'r').read()
 else:
     pageId = 'Welcome'
