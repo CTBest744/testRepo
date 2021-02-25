@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <body>
-    2018-01-20 18:36:01
+    <?php
+      echo date('Y-m-d H:i:s');
+    ?>
   </body>
 </html>
